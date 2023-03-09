@@ -51,7 +51,7 @@ for card in tqdm(cards_all):
             print('з/п не указана')
             salary = 'з/п не указана'
 
-        data.append({'вакансия': name, 'ссылка': link, 'город': city, 'з/п': salary})
+        data.append({'вакансия': name, 'ссылка': link, 'компания':name_company, 'город': city, 'з/п': salary})
 
 with open('result.json', 'w', encoding='utf-8') as temp:
     json.dump(data, temp, ensure_ascii=False)
